@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KK실내풋살파크 | 의정부 실내·루프탑 풋살장</title>
+<meta name="description" content="경기도 의정부 KK실내풋살파크. 실내·루프탑 구장, 성인·유소년 아카데미와 엘리트·그룹 레슨, 소셜 매치.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?auto=format&fit=crop&q=75&w=2400" fetchpriority="high">
+<script type="importmap">
+{ "imports": { "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm" } }
+</script>
+<style>
+:root{
+  --background:#ffffff; --foreground:#0a0a0a;
+  --brand:#2563c9; --brand-deep:#0f2f63; --brand-light:#5790e6; --accent-teal:#0b6e97;
+  --surface:#f4f4f4; --surface-card:#ffffff; --ink:#0a0a0a; --ink-soft:#717784;
+  --ghost:#d7dae1; --hairline:#e6e8ec; --on-brand:#ffffff;
+  --radius-card:1.5rem; --radius-card-lg:2rem; --radius-pill:62.5rem;
+  --ease-expo:cubic-bezier(0.16,1,0.3,1);
+  --ease-quart:cubic-bezier(0.25,1,0.5,1);
+  --ease-io-cubic:cubic-bezier(0.65,0,0.35,1);
+}
+/* adaptive rem grid */
+html{font-size:16px}
+@media (max-width:1920px){html{font-size:0.833333vw}}
+@media (max-width:1440px){html{font-size:1.111111vw}}
+@media (max-width:1024px){html{font-size:1.5625vw}}
+@media (max-width:640px){html{font-size:4.444444vw}}
+
+/* reset */
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+img,svg{display:block;max-width:100%}
+ul{list-style:none;padding:0}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+input,textarea{font:inherit;color:inherit}
+body{min-height:100vh;background:var(--background);color:var(--foreground);font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;word-break:keep-all;font-weight:400;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--brand-light);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+.m{font-weight:500}
+
+main{width:100%;overflow-x:clip;padding:0.5rem}
+@media (min-width:640px){main{padding:0.75rem}}
+
+/* reveal primitives */
+.mask-line{display:block;overflow:hidden;padding-bottom:0.14em}
+.mask-word{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:0.12em}
+.mask-inner{display:inline-block;will-change:transform,opacity;transform:translateY(115%);opacity:0}
+.mask-line>.mask-inner{display:block}
+.fade-word{display:inline-block;will-change:transform,opacity;transform:translateY(18px);opacity:0}
+[data-inview]{opacity:0}
+
+/* shared: icons */
+.ico{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* eyebrow */
+.eyebrow{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-soft)}
+.eyebrow::before{content:"";width:0.375rem;height:0.375rem;border-radius:var(--radius-pill);background:var(--brand)}
+.eyebrow.light{color:rgba(255,255,255,.7)}
+.eyebrow.light::before{background:var(--brand-light)}
+
+/* pill button */
+.pill{display:inline-flex;align-items:center;gap:0.5rem;border-radius:var(--radius-pill);padding:0.875rem 1.75rem;font-size:0.875rem;font-weight:500;text-transform:uppercase;letter-spacing:0.025em;transition:background-color .25s,color .25s,border-color .25s}
+.pill:focus-visible{outline:2px solid var(--brand-light);outline-offset:2px}
+.pill svg{width:1rem;height:1rem}
+.pill-light{background:#fff;color:var(--brand-deep)}
+.pill-light:hover{background:var(--brand-light);color:#fff}
+.pill-solid{background:var(--ink);color:#fff}
+.pill-solid:hover{background:var(--brand-deep)}
+.pill-outline{border:1px solid currentColor;color:var(--ink)}
+.pill-outline:hover{background:var(--ink);color:#fff}
+
+/* arrow button */
+.arrow-btn{display:grid;place-items:center;width:3rem;height:3rem;border-radius:var(--radius-pill);border:1px solid var(--hairline);transition:background-color .25s,border-color .25s,color .25s}
+@media (min-width:640px){.arrow-btn{width:3.5rem;height:3.5rem}}
+.arrow-btn svg{width:1.25rem;height:1.25rem}
+.arrow-btn.outline{background:transparent;color:var(--ink)}
+.arrow-btn.outline:hover{border-color:var(--ink)}
+.arrow-btn.solid{background:var(--ink);border-color:var(--ink);color:#fff}
+.arrow-btn.solid:hover{background:var(--brand-deep);border-color:var(--brand-deep)}
+
+/* dots */
+.dots{display:flex;align-items:center;gap:0.5rem}
+.dot-btn{padding:0.375rem}
+.dot{display:block;height:0.375rem;width:0.375rem;border-radius:var(--radius-pill);background:var(--ghost);transition:width .35s var(--ease-expo),background-color .3s}
+.dot-btn.is-active .dot{width:1.25rem;background:var(--ink)}
+.dots.light .dot{background:rgba(255,255,255,.4)}
+.dots.light .dot-btn.is-active .dot{background:#fff}
+
+/* brand */
+.brand{display:inline-flex;align-items:center;gap:0.5rem;font-size:1rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em}
+.brand svg{width:1.25rem;height:1.25rem}
+
+/* glass card */
+.glass{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.1);padding:0.75rem;border-radius:var(--radius-card);box-shadow:0 20px 25px -5px rgba(15,47,99,.2),0 8px 10px -6px rgba(15,47,99,.2);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);height:calc(100svh - 1rem);min-height:36rem;display:flex;flex-direction:column}
+@media (min-width:640px){.hero{height:calc(100svh - 1.5rem)}}
+.hero-plate{position:absolute;inset:0;z-index:-10}
+.hero-plate-inner{position:absolute;left:0;right:0;top:-16%;height:132%;width:100%;will-change:transform}
+.hero-plate-inner img{width:100%;height:100%;object-fit:cover}
+.hero-plate-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,47,99,.65),rgba(15,47,99,.35),rgba(15,47,99,.75))}
+
+.site-header{display:flex;align-items:center;padding:1.5rem 1.5rem 0;font-size:0.75rem;color:#fff}
+@media (min-width:640px){.site-header{padding:2rem 2.5rem 0}}
+.hdr-nav{display:none;flex:1;gap:2rem}
+.hdr-nav a{color:rgba(255,255,255,.9);transition:color .2s}
+.hdr-nav a:hover{color:#fff}
+.hdr-brand{flex:1;display:flex;justify-content:flex-start}
+@media (min-width:1024px){.hdr-nav{display:flex}.hdr-brand{justify-content:center}}
+.hdr-right{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:1rem}
+@media (min-width:640px){.hdr-right{gap:1.25rem}}
+.hdr-book{display:none;text-transform:uppercase;letter-spacing:0.025em;text-underline-offset:4px}
+.hdr-book:hover{text-decoration:underline}
+@media (min-width:640px){.hdr-book{display:inline}}
+.burger{display:grid;place-items:center;align-content:center;gap:5px;width:2.5rem;height:2.5rem;border-radius:var(--radius-pill);background:rgba(255,255,255,.15);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:background-color .2s}
+.burger:hover{background:rgba(255,255,255,.25)}
+.burger span{display:block;width:1rem;height:1px;background:#fff}
+
+.hero-title-wrap{padding:1rem 1.5rem 0}
+@media (min-width:640px){.hero-title-wrap{padding-left:2.5rem;padding-right:2.5rem}}
+.hero-sub{margin:1rem 0 0.75rem;font-size:1.0625rem;font-weight:400;letter-spacing:-0.01em;text-align:center;color:#fff;text-shadow:0 1px 12px rgba(15,47,99,.6)}
+@media (min-width:640px){.hero-sub{margin:1.5rem 0 1.25rem;font-size:1.5rem}}
+.hero-title{font-size:9.9vw;font-weight:500;text-transform:uppercase;line-height:1;letter-spacing:-0.04em;white-space:nowrap}
+@media (min-width:640px){.hero-title{font-size:11vw}}
+@media (min-width:1024px){.hero-title{font-size:11.5vw}}
+
+.hero-bottom{margin-top:auto;padding:0 1.5rem 2rem;display:flex;flex-direction:column;gap:1.5rem}
+@media (min-width:640px){.hero-bottom{padding:0 2.5rem 2.5rem;flex-direction:row;justify-content:flex-start;align-items:flex-end}}
+.tagline{font-size:2.4rem;font-weight:500;text-transform:uppercase;line-height:1.1;letter-spacing:-0.025em;color:rgba(255,255,255,.85)}
+.hero-cluster{display:flex;align-items:flex-end;gap:1rem}
+@media (min-width:640px){.hero-cluster{flex:1;justify-content:space-between}}
+
+.cs{display:none;width:16rem;flex-direction:column;gap:0.75rem}
+@media (min-width:768px){.cs{display:flex}}
+.cs-stack{display:grid}
+.cs-card{grid-area:1/1;display:flex;gap:0.75rem}
+.cs-img{width:3.5rem;height:3.5rem;border-radius:0.75rem;object-fit:cover;flex-shrink:0}
+.cs-meta{display:flex;flex-direction:column;justify-content:center;gap:0.2rem;min-width:0}
+.cs-brand{font-size:0.7rem;font-weight:500;text-transform:uppercase;letter-spacing:0.025em}
+.cs-title{font-size:0.7rem;text-transform:uppercase;opacity:.8}
+.cs-cta{font-size:0.65rem;text-decoration:underline;text-underline-offset:3px;margin-top:0.15rem}
+
+.member{display:flex;align-items:stretch;gap:0.75rem;width:100%;max-width:20rem}
+@media (min-width:640px){.member{max-width:15rem}}
+.member-col{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:0.5rem}
+.member-val{font-size:1.875rem;font-weight:500;line-height:1}
+.avatars{display:flex}
+.avatars span{width:1.25rem;height:1.25rem;border-radius:var(--radius-pill);border:1px solid rgba(15,47,99,.4)}
+.avatars span+span{margin-left:-0.5rem}
+.member-cap{font-size:0.65rem;opacity:.8}
+.member-img{width:4rem;aspect-ratio:3/4;border-radius:0.75rem;object-fit:cover;flex-shrink:0}
+
+/* ---------- TRUST ---------- */
+.trust{position:relative;isolation:isolate;overflow:hidden;background:var(--background);padding:4rem 1.5rem}
+@media (min-width:640px){.trust{padding:5rem 2.5rem}}
+.trust-top{position:relative;z-index:20;display:flex;flex-direction:column;gap:1.5rem}
+@media (min-width:640px){.trust-top{flex-direction:row;justify-content:space-between;align-items:flex-start}}
+.pct{width:7rem;height:7rem;border-radius:var(--radius-pill);background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0.25rem;flex-shrink:0}
+@media (min-width:640px){.pct{width:8rem;height:8rem}}
+.pct b{font-size:1.5rem;font-weight:500}
+.pct span{font-size:0.6rem;color:var(--ink-soft);max-width:7em;line-height:1.3}
+.badge-card{display:flex;align-items:flex-start;gap:1rem;max-width:28rem;border-radius:var(--radius-card);background:var(--surface);padding:1.25rem}
+@media (min-width:640px){.badge-card{gap:1.25rem;padding:1.5rem}}
+.chip{border-radius:0.75rem;background:var(--background);padding:0.5rem 1rem;font-size:1.25rem;font-weight:500;flex-shrink:0}
+.badge-card h3{font-size:1.125rem;font-weight:500}
+.badge-card p{font-size:0.75rem;color:var(--ink-soft);line-height:1.625;margin-top:0.375rem}
+
+.ghost-h{position:relative;z-index:0;pointer-events:none;user-select:none;-webkit-user-select:none;max-width:88rem;margin:3rem auto 0;font-size:8.2vw;font-weight:500;text-transform:uppercase;line-height:1.15;letter-spacing:-0.04em;color:var(--ghost)}
+.ghost-row{display:flex;justify-content:space-between}
+.gw{display:inline-block;will-change:transform}
+.gw .mask-word{padding-bottom:0.12em}
+.gw.ink{color:var(--ink)}
+
+.coach-pos{position:relative;z-index:10;width:100%;max-width:18rem;margin:2.5rem auto 0}
+@media (min-width:640px){.coach-pos{position:absolute;left:50%;top:50%;width:18rem;margin:0;transform:translate(-50%,-50%)}}
+.coach{position:relative;border-radius:var(--radius-card);background:var(--brand-deep);color:#fff;padding:1.5rem;box-shadow:0 25px 50px -12px rgba(15,47,99,.35)}
+.coach-stack{display:grid}
+.coach-prof{grid-area:1/1}
+.coach-kicker{font-size:0.75rem;color:var(--brand-light)}
+.coach-name{font-size:2.25rem;letter-spacing:-0.03em;line-height:1.1;margin-top:0.5rem}
+.coach-role{font-size:0.75rem;color:rgba(255,255,255,.7);margin-top:0.375rem}
+.coach-list{margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.15);display:flex;flex-direction:column;gap:0.4rem;font-size:0.75rem;line-height:1.4;color:rgba(255,255,255,.85)}
+.coach-list li{display:flex;gap:0.5rem}
+.coach-list li::before{content:"";flex-shrink:0;width:0.25rem;height:0.25rem;border-radius:var(--radius-pill);background:var(--brand-light);margin-top:0.55em}
+.trust-ctrl{position:relative;z-index:20;margin-top:3rem;display:flex;justify-content:space-between;align-items:center}
+@media (min-width:640px){.trust-ctrl{margin-top:6rem}}
+
+/* ---------- PROGRAMS ---------- */
+.programs{background:var(--surface);padding:6rem 1.5rem}
+@media (min-width:640px){.programs{padding-left:2.5rem;padding-right:2.5rem}}
+.h-xl{font-size:3rem;font-weight:500;line-height:1.1;letter-spacing:-0.035em;margin-top:1rem}
+.prog-list{margin-top:3.5rem}
+.prog-list li a{display:block;border-top:1px solid var(--hairline);outline:none}
+.prog-list li:last-child a{border-bottom:1px solid var(--hairline)}
+.prog-list li a:focus-visible{background:var(--background)}
+.prog-row{display:flex;align-items:center;gap:1.5rem;padding:1.75rem 0}
+.prog-idx{width:2.5rem;font-size:0.875rem;font-weight:500;color:var(--ink-soft);flex-shrink:0}
+.prog-body{flex:1;min-width:0}
+.prog-name{font-size:1.5rem;font-weight:500;letter-spacing:-0.025em}
+@media (min-width:640px){.prog-name{font-size:1.875rem}}
+.prog-desc{font-size:0.875rem;color:var(--ink-soft);margin-top:0.25rem}
+.prog-arrow{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:var(--radius-pill);border:1px solid var(--hairline);flex-shrink:0}
+.prog-arrow svg{width:1.25rem;height:1.25rem}
+
+/* ---------- FACILITIES ---------- */
+.facilities{position:relative;background:var(--background);border-radius:var(--radius-card-lg);margin-top:-2.5rem;padding:4rem 1.5rem 5rem}
+@media (min-width:640px){.facilities{padding-left:2.5rem;padding-right:2.5rem}}
+.fac-grid{display:grid;grid-template-columns:1fr;align-items:end;gap:2.5rem}
+@media (min-width:768px){.fac-grid{grid-template-columns:1fr 1fr}}
+.fac-intro{max-width:24rem}
+.fac-icon{width:4rem;height:4rem;border-radius:var(--radius-card);object-fit:cover}
+.fac-intro .h-xl{margin-top:1.5rem}
+.fac-body{font-size:0.875rem;color:var(--ink-soft);max-width:20rem;margin-top:1.5rem;line-height:1.5}
+.fac-cards{display:flex;align-items:flex-end;gap:1.25rem}
+.fac-cards figure{flex:1;min-width:0}
+.fac-cards figure:nth-child(2){margin-bottom:2rem}
+.tile{position:relative;aspect-ratio:3/4;border-radius:var(--radius-card);overflow:hidden;background:var(--surface)}
+.tile img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.tile figcaption{position:absolute;left:0.75rem;right:0.75rem;bottom:0.75rem;border-radius:0.75rem;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;padding:0.75rem 1rem}
+.tile figcaption b{display:block;font-size:0.875rem;font-weight:500}
+.tile figcaption span{display:block;font-size:0.65rem;opacity:.85;margin-top:0.15rem;line-height:1.4}
+.tone-clay figcaption{background:rgba(15,47,99,.4)}
+.tone-blue figcaption{background:rgba(11,110,151,.55)}
+
+/* ---------- STATS ---------- */
+.stats{background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);margin-top:0.75rem;padding:5rem 1.5rem}
+@media (min-width:640px){.stats{padding-left:2.5rem;padding-right:2.5rem}}
+.price-groups{display:grid;grid-template-columns:1fr;gap:3rem;margin-top:4rem}
+@media (min-width:1024px){.price-groups{grid-template-columns:1fr 1fr;column-gap:4rem}}
+.price-group h3{font-size:0.875rem;font-weight:500;color:rgba(255,255,255,.65)}
+.price-list{margin-top:1rem}
+.price-row{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;border-top:1px solid rgba(255,255,255,.2);padding:1.5rem 0}
+.price-list li:last-child .price-row{border-bottom:1px solid rgba(255,255,255,.2)}
+.price-label{flex:1;min-width:0}
+.price-name{display:block;font-size:1.25rem;font-weight:600;letter-spacing:-0.02em}
+@media (min-width:640px){.price-name{font-size:1.5rem}}
+.price-sub{display:block;font-size:0.875rem;font-weight:300;color:rgba(255,255,255,.65);margin-top:0.375rem}
+.price-val{font-size:1.75rem;font-weight:700;letter-spacing:-0.03em;white-space:nowrap}
+@media (min-width:640px){.price-val{font-size:2.25rem}}
+.price-val small{font-size:0.5em;font-weight:500;margin-left:0.15em}
+.price-val.muted{font-size:1rem;font-weight:500;color:rgba(255,255,255,.65)}
+.price-note{margin-top:2.5rem;font-size:0.875rem;font-weight:300;color:rgba(255,255,255,.6)}
+.stats dl{display:grid;grid-template-columns:repeat(2,1fr);column-gap:2rem;row-gap:3rem;margin-top:4rem}
+@media (min-width:1024px){.stats dl{grid-template-columns:repeat(4,1fr)}}
+.stat{border-top:1px solid rgba(255,255,255,.2);padding-top:1.25rem}
+.stat-val{display:block;font-size:3.75rem;font-weight:500;letter-spacing:-0.025em;line-height:1}
+@media (min-width:640px){.stat-val{font-size:4.5rem}}
+.stat-lab{display:block;font-size:0.875rem;color:rgba(255,255,255,.65);margin-top:0.75rem}
+
+/* ---------- TESTIMONIALS ---------- */
+.testis{background:var(--background);padding:5rem 1.5rem}
+@media (min-width:640px){.testis{padding:6rem 2.5rem}}
+.testi-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:3.5rem}
+@media (min-width:768px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
+.testi-grid>li{display:flex}
+.testi{display:flex;flex-direction:column;justify-content:space-between;height:100%;width:100%;border-radius:var(--radius-card);background:var(--surface);padding:1.75rem}
+.q-glyph{font-size:2.25rem;color:var(--brand);line-height:1}
+.info-title{font-size:1.5rem;letter-spacing:-0.025em;margin-top:1.25rem}
+.info-body{font-size:1rem;line-height:1.7;color:var(--ink-soft);margin-top:0.75rem}
+.info-body a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.form-note{font-size:0.75rem;color:var(--ink-soft);line-height:1.6}
+.testi blockquote{font-size:1.125rem;line-height:1.625;color:var(--ink);margin-top:1rem}
+.testi figcaption{border-top:1px solid var(--hairline);padding-top:1rem;margin-top:1.5rem}
+.testi figcaption b{display:block;font-weight:500}
+.testi figcaption span{font-size:0.875rem;color:var(--ink-soft)}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);margin-top:0.75rem;padding:3.5rem 1.5rem}
+@media (min-width:640px){.footer{padding:4rem 2.5rem}}
+.f-cta{border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:3.5rem;display:flex;flex-direction:column;gap:2rem}
+@media (min-width:640px){.f-cta{flex-direction:row;justify-content:space-between;align-items:flex-end}}
+.f-big{font-size:3rem;font-weight:500;line-height:1.08;letter-spacing:-0.035em;margin-top:1rem}
+@media (min-width:640px){.f-big{font-size:3.75rem}}
+.f-cols{display:grid;grid-template-columns:1fr;gap:2.5rem;padding:3.5rem 0}
+@media (min-width:640px){.f-cols{grid-template-columns:1fr 1fr}}
+@media (min-width:768px){.f-cols{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.f-brand{max-width:20rem}
+.f-brand .brand{font-size:1.125rem}
+.f-blurb{font-size:0.875rem;color:rgba(255,255,255,.65);margin-top:1rem;line-height:1.5}
+.f-brand address{font-style:normal;margin-top:1.5rem;color:rgba(255,255,255,.8);font-size:0.875rem;display:flex;flex-direction:column;gap:0.375rem}
+.f-brand address a:hover{color:#fff}
+.f-muted{color:rgba(255,255,255,.55)}
+.f-nav h3{font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,.5)}
+.f-nav ul{font-size:0.875rem;color:rgba(255,255,255,.8);margin-top:1.25rem;display:flex;flex-direction:column;gap:0.75rem}
+.f-nav a:hover,.f-bottom a:hover{color:#fff}
+.f-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:2rem;font-size:0.875rem;color:rgba(255,255,255,.6);display:flex;flex-direction:column;gap:1.25rem}
+@media (min-width:640px){.f-bottom{flex-direction:row;justify-content:space-between;align-items:center}}
+.f-bottom nav{display:flex;flex-wrap:wrap;gap:1.25rem}
+
+/* ---------- OVERLAYS ---------- */
+.close-btn{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:var(--radius-pill);flex-shrink:0;transition:background-color .2s}
+.close-btn svg{width:1.125rem;height:1.125rem}
+
+.menu{position:fixed;inset:0;z-index:70;display:flex;flex-direction:column;pointer-events:none;color:#fff}
+.menu.open{pointer-events:auto}
+.menu-bg{position:absolute;inset:0;background:var(--brand-deep);opacity:0}
+.menu-panel{position:relative;height:100%;padding:0.5rem;opacity:0}
+@media (min-width:640px){.menu-panel{padding:0.75rem}}
+.menu-inner{height:100%;display:flex;flex-direction:column;padding:1.5rem}
+@media (min-width:640px){.menu-inner{padding:2rem 2.5rem 2.5rem}}
+.menu-top{display:flex;justify-content:space-between;align-items:center}
+.menu .close-btn{background:rgba(255,255,255,.15)}
+.menu .close-btn:hover{background:rgba(255,255,255,.25)}
+.menu-nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.5rem}
+.menu-nav a{display:block;font-size:3rem;font-weight:500;letter-spacing:-0.035em;line-height:1.2;transition:color .2s;width:max-content}
+@media (min-width:640px){.menu-nav a{font-size:4.5rem}}
+.menu-nav a:hover{color:var(--brand-light)}
+.menu-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:2rem;display:flex;flex-direction:column;gap:1.5rem}
+@media (min-width:640px){.menu-bottom{flex-direction:row;justify-content:space-between;align-items:center}}
+.menu-social{display:flex;flex-wrap:wrap;gap:1.25rem;font-size:0.875rem;color:rgba(255,255,255,.7)}
+.menu-social a:hover{color:#fff}
+
+.modal{position:fixed;inset:0;z-index:90;display:flex;align-items:flex-end;justify-content:center;padding:0.75rem;pointer-events:none}
+@media (min-width:640px){.modal{align-items:center;padding:1.5rem}}
+.modal.open{pointer-events:auto}
+.modal-bg{position:absolute;inset:0;background:rgba(15,47,99,.4);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);opacity:0}
+.modal-panel{position:relative;width:100%;max-height:92svh;overflow-y:auto;border-radius:var(--radius-card-lg);background:var(--surface-card);padding:1.5rem;color:var(--ink);box-shadow:0 25px 50px -12px rgba(15,47,99,.35);opacity:0}
+@media (min-width:640px){.modal-panel{max-width:32rem;padding:2rem}}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.modal-title{font-size:2.25rem;font-weight:500;line-height:1.1;letter-spacing:-0.025em;margin-top:0.75rem}
+@media (min-width:640px){.modal-title{font-size:3rem}}
+.modal .close-btn{background:var(--surface)}
+.modal .close-btn:hover{background:var(--hairline)}
+.form{margin-top:1.75rem;display:flex;flex-direction:column;gap:1rem}
+.field label{display:block;font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.02em;color:var(--ink-soft);margin-bottom:0.5rem}
+.field input,.field textarea{width:100%;border-radius:0.75rem;border:1px solid var(--hairline);background:var(--background);padding:0.75rem 1rem;font-size:0.875rem;outline:none;resize:vertical;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field textarea:focus{border-color:var(--brand-light);box-shadow:0 0 0 3px rgba(87,144,230,.25)}
+.submit{align-self:flex-start;border-radius:var(--radius-pill);background:var(--ink);color:#fff;padding:0.875rem 1.75rem;font-size:0.875rem;font-weight:500;text-transform:uppercase;letter-spacing:0.025em;transition:background-color .2s,opacity .2s;margin-top:0.25rem}
+.submit:hover{background:var(--brand-deep)}
+.submit:disabled{opacity:.6;cursor:default}
+.success{margin-top:2rem;border-radius:var(--radius-card);background:var(--surface);padding:1.5rem;text-align:center}
+.success-ico{width:3rem;height:3rem;border-radius:var(--radius-pill);background:var(--brand);color:#fff;display:grid;place-items:center;margin:0 auto}
+.success-ico svg{width:1.5rem;height:1.5rem}
+.success h3{font-size:1.125rem;font-weight:500;margin-top:1rem}
+.success p{font-size:0.875rem;color:var(--ink-soft);margin-top:0.5rem;line-height:1.5}
+.success .submit{align-self:auto;margin-top:1.25rem}
+[hidden]{display:none!important}
+
+/* ---------- LOADER ---------- */
+.loader{position:fixed;inset:0;z-index:200;background:var(--brand-deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;will-change:transform}
+.loader-mark{display:inline-flex;align-items:center;gap:0.5rem;font-size:1.5rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;opacity:0}
+.loader-mark svg{width:1.75rem;height:1.75rem}
+.loader-track{width:10rem;height:1px;border-radius:var(--radius-pill);background:rgba(255,255,255,.2);overflow:hidden}
+.loader-fill{height:100%;background:#fff;transform:scaleX(0);transform-origin:left}
+/* ---------- type hierarchy (Pretendard Variable) ----------
+   display 800/700 · titles 600 · UI labels 500 · body & captions 300 */
+body{font-weight:300}
+.hero-title{font-family:"Anton","Pretendard Variable",sans-serif;font-weight:400;letter-spacing:0.005em;line-height:0.95}
+.h-xl,.f-big,.modal-title,.ghost-h,.menu-nav a,.stat-val,.member-val,.pct b,.q-glyph,.coach-name{font-weight:700}
+.tagline,.prog-name,.badge-card h3,.success h3,.info-title{font-weight:600}
+.tile figcaption b,.coach-cap b,.testi figcaption b,.chip,.cs-brand,.brand,.loader-mark{font-weight:600}
+.eyebrow,.pill,.submit,.field label,.f-nav h3,.prog-idx,.hdr-book,.coach-kicker{font-weight:500}
+.prog-desc,.badge-card p,.fac-body,.stat-lab,.testi blockquote,.f-blurb,.pct span,.member-cap,.cs-title,.cs-cta,
+.tile figcaption span,.coach-role,.coach-list,.testi figcaption span,.success p,.info-body,.form-note,.f-nav ul,.f-bottom,.hdr-nav,.menu-social,
+.f-brand address,.field input,.field textarea{font-weight:300}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-mark" id="loader-mark"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8.2l3.4 2.5-1.3 4h-4.2l-1.3-4z"/><path d="M12 8.2V3.4M15.4 10.7l4.4-1.5M14.1 14.7l2.7 3.8M9.9 14.7l-2.7 3.8M8.6 10.7L4.2 9.2"/></svg>KK Futsal Park</div>
+  <div class="loader-track"><div class="loader-fill" id="loader-fill"></div></div>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-plate">
+      <div class="hero-plate-inner" id="hero-plate">
+        <img src="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?auto=format&fit=crop&q=75&w=2400" alt="실내 코트에서 공을 다투는 풋살 선수들" loading="eager" fetchpriority="high">
+      </div>
+      <div class="hero-plate-shade"></div>
+    </div>
+
+    <header class="site-header">
+      <nav class="hdr-nav" aria-label="주요 메뉴">
+        <a href="#programs">레슨</a>
+        <a href="#pricing">요금</a>
+        <a href="#testimonials">오시는 길</a>
+      </nav>
+      <div class="hdr-brand">
+        <a href="#hero" class="brand" aria-label="KK실내풋살파크 홈"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8.2l3.4 2.5-1.3 4h-4.2l-1.3-4z"/><path d="M12 8.2V3.4M15.4 10.7l4.4-1.5M14.1 14.7l2.7 3.8M9.9 14.7l-2.7 3.8M8.6 10.7L4.2 9.2"/></svg>KK Futsal Park</a>
+      </div>
+      <div class="hdr-right">
+        <button class="hdr-book" data-open-contact>체험레슨 신청</button>
+        <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <div class="hero-title-wrap">
+      <p class="hero-sub" id="hero-sub" data-lines="의정부 실내·루프탑 풋살장. 성인·유소년 레슨과 구장 대관." data-manual></p>
+      <h1 class="hero-title" id="hero-title">KK Futsal Park</h1>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-cluster">
+        <div class="cs" id="cs">
+          <div class="cs-stack glass" id="cs-stack" aria-live="polite"></div>
+          <div class="dots light" id="cs-dots"></div>
+        </div>
+        <article class="member glass" id="member">
+          <div class="member-col">
+            <p class="member-val">5vs5</p>
+            <div class="avatars" aria-hidden="true">
+              <span style="background:#5790e6"></span><span style="background:#c2e029"></span><span style="background:#0b6e97"></span><span style="background:#ffffff"></span>
+            </div>
+            <p class="member-cap">1시간 65,000원</p>
+          </div>
+          <img class="member-img" src="images/court-indoor.png" alt="KK실내풋살파크 실내 구장" loading="lazy">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust" id="trust" aria-labelledby="trust-title">
+    <h2 class="ghost-h" id="trust-title">
+      <span class="ghost-row"><span class="gw" data-px="-3,3"></span><span class="gw" data-px="3,-3"></span></span>
+      <span class="ghost-row"><span class="gw ink" data-px="-2,4"></span><span class="gw" data-px="4,-3"></span></span>
+    </h2>
+
+    <div class="coach-pos">
+      <div class="coach" id="coach">
+        <div class="coach-stack" id="coach-stack"></div>
+      </div>
+    </div>
+
+    <div class="trust-ctrl">
+      <button class="arrow-btn outline" id="trust-prev" aria-label="이전 코치"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <div class="dots" id="trust-dots"></div>
+      <button class="arrow-btn solid" id="trust-next" aria-label="다음 코치"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="programs" id="programs" aria-labelledby="programs-title">
+    <span class="eyebrow">프로그램</span>
+    <h2 class="h-xl" id="programs-title" data-lines="레슨과|소셜 매치"></h2>
+    <ul class="prog-list" id="prog-list"></ul>
+  </section>
+
+  <!-- FACILITIES -->
+  <section class="facilities" id="facilities" aria-labelledby="facilities-title">
+    <div class="fac-grid">
+      <div class="fac-intro">
+        <img class="fac-icon" src="images/court-wide.png" alt="KK실내풋살파크 구장 전경" loading="lazy" data-inview='{"from":{"opacity":0,"scale":0.85},"to":{"opacity":1,"scale":1},"t":240,"f":20}'>
+        <h2 class="h-xl" id="facilities-title" data-lines="실내 구장,|루프탑 구장,|족구장"></h2>
+        <p class="fac-body" id="fac-body">볼, 팀조끼, 풋살화는 무료로 빌려드립니다. 냉난방기, 남녀 분리 화장실, 대기 공간, 음료 판매대가 있고 주차도 무료예요.</p>
+      </div>
+      <div class="fac-cards">
+        <figure data-inview='{"from":{"opacity":0,"y":48},"to":{"opacity":1,"y":0},"t":180,"f":26,"d":0}'>
+          <div class="tile tone-blue">
+            <img src="images/court-indoor.png" alt="KK실내풋살파크 실내 구장" loading="lazy">
+            <figcaption><b>실내 구장</b><span>5vs5 · 냉난방 완비</span></figcaption>
+          </div>
+        </figure>
+        <figure data-inview='{"from":{"opacity":0,"y":48},"to":{"opacity":1,"y":0},"t":180,"f":26,"d":140}'>
+          <div class="tile tone-clay">
+            <img src="images/court-match.jpg" alt="KK실내풋살파크에서 5:5 경기 중인 회원들" loading="lazy">
+            <figcaption><b>플랩풋볼 매치</b><span>5:5 소셜 매치</span></figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="stats" id="pricing" aria-labelledby="pricing-title">
+    <span class="eyebrow light">요금</span>
+    <h2 class="h-xl" id="pricing-title" data-lines="이용 요금"></h2>
+    <div class="price-groups" id="price-groups"></div>
+    <p class="price-note">요금은 바뀔 수 있습니다. 예약 전에 전화로 확인해 주세요.</p>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testis" id="testimonials" aria-labelledby="testimonials-title">
+    <span class="eyebrow">이용 안내</span>
+    <h2 class="h-xl" id="testimonials-title" data-lines="예약과|오시는 길"></h2>
+    <ul class="testi-grid" id="testi-grid"></ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="f-cta">
+      <div>
+        <span class="eyebrow light">처음이라면</span>
+        <p class="f-big" data-lines="체험레슨|30,000원"></p>
+      </div>
+      <div data-inview='{"from":{"opacity":0,"y":20},"to":{"opacity":1,"y":0},"t":200,"f":24,"d":150}'>
+        <button class="pill pill-light" data-open-contact>체험레슨 신청<svg class="ico pill-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="f-cols">
+      <div class="f-brand">
+        <a href="#hero" class="brand"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8.2l3.4 2.5-1.3 4h-4.2l-1.3-4z"/><path d="M12 8.2V3.4M15.4 10.7l4.4-1.5M14.1 14.7l2.7 3.8M9.9 14.7l-2.7 3.8M8.6 10.7L4.2 9.2"/></svg>KK Futsal Park</a>
+        <p class="f-blurb">경기도 의정부시 실내·루프탑 풋살장입니다. 구장 대여와 성인·유소년 레슨을 운영합니다.</p>
+        <address>
+          <a href="tel:050713440708">0507-1344-0708</a>
+          <a href="tel:01029220708">010-2922-0708</a>
+          <a href="https://map.naver.com/p/search/KK%EC%8B%A4%EB%82%B4%ED%92%8B%EC%82%B4%ED%8C%8C%ED%81%AC" target="_blank" rel="noopener" class="f-muted">경기도 의정부시 둔야로 12, 3층 (의정부보건소 옆) ↗</a>
+          <span class="f-muted">무료 주차 · 경전철 의정부역 1번 출구 380m</span>
+        </address>
+      </div>
+      <nav class="f-nav" aria-label="프로그램"><h3>프로그램</h3><ul>
+        <li><a href="#programs">성인 아카데미</a></li><li><a href="#programs">유소년 축구레슨</a></li><li><a href="#programs">프리미엄 축구레슨</a></li><li><a href="#programs">그룹·엘리트 레슨</a></li><li><a href="#programs">소셜 매치</a></li>
+      </ul></nav>
+      <nav class="f-nav" aria-label="구장"><h3>구장</h3><ul>
+        <li><a href="#facilities">실내 구장</a></li><li><a href="#facilities">루프탑 구장</a></li><li><a href="#pricing">족구장</a></li><li><a href="#facilities">장비 대여</a></li>
+      </ul></nav>
+      <nav class="f-nav" aria-label="안내"><h3>안내</h3><ul>
+        <li><a href="#pricing">요금</a></li><li><a href="#testimonials">오시는 길</a></li><li><a href="#testimonials">예약·대관</a></li><li><a href="#contact">문의</a></li>
+      </ul></nav>
+    </div>
+    <div class="f-bottom">
+      <p>© 2026 KK실내풋살파크. All rights reserved.</p>
+      <nav aria-label="약관"><a href="#privacy">개인정보처리방침</a><a href="#terms">이용약관</a></nav>
+    </div>
+  </footer>
+</main>
+
+<!-- MENU OVERLAY -->
+<div class="menu" id="menu" inert aria-hidden="true">
+  <div class="menu-bg" id="menu-bg"></div>
+  <div class="menu-panel" id="menu-panel" role="dialog" aria-modal="true" aria-label="메뉴">
+    <div class="menu-inner">
+      <div class="menu-top">
+        <span class="brand"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8.2l3.4 2.5-1.3 4h-4.2l-1.3-4z"/><path d="M12 8.2V3.4M15.4 10.7l4.4-1.5M14.1 14.7l2.7 3.8M9.9 14.7l-2.7 3.8M8.6 10.7L4.2 9.2"/></svg>KK Futsal Park</span>
+        <button class="close-btn" id="menu-close" aria-label="메뉴 닫기"><svg class="ico x-ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <nav class="menu-nav" id="menu-nav" aria-label="메뉴">
+        <a href="#programs">레슨</a><a href="#facilities">구장</a><a href="#pricing">요금</a><a href="#testimonials">오시는 길</a><a href="#contact">문의</a>
+      </nav>
+      <div class="menu-bottom">
+        <button class="pill pill-light" id="menu-book">체험레슨 신청<svg class="ico pill-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <nav class="menu-social" aria-label="연락처"><a href="tel:050713440708">0507-1344-0708</a><span>의정부시 둔야로 12, 3층</span></nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div class="modal" id="modal" inert aria-hidden="true">
+  <div class="modal-bg" id="modal-bg"></div>
+  <div class="modal-panel" id="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <div>
+        <span class="eyebrow">레슨 신청</span>
+        <h2 class="modal-title" id="modal-title" data-lines="체험레슨|신청" data-manual></h2>
+      </div>
+      <button class="close-btn" id="modal-close" aria-label="닫기"><svg class="ico x-ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <form class="form" id="form" novalidate>
+      <div class="field"><label for="f-name">이름</label><input id="f-name" name="name" type="text" placeholder="홍길동" autocomplete="name"></div>
+      <div class="field"><label for="f-email">연락처</label><input id="f-email" name="phone" type="tel" placeholder="010-0000-0000" autocomplete="tel"></div>
+      <div class="field"><label for="f-msg">관심 있는 프로그램</label><textarea id="f-msg" name="message" rows="3" placeholder="성인 아카데미 문의드려요. 평일 저녁반 있나요?"></textarea></div>
+      <button class="submit" id="submit" type="submit">신청하기</button>
+      <p class="form-note">구장 대관은 스페이스클라우드 ‘KK실내풋살파크’ 또는 소셜 매치 플랫폼에서 예약할 수 있어요.</p>
+    </form>
+    <div class="success" id="success" hidden>
+      <div class="success-ico"><svg class="ico" viewBox="0 0 24 24" style="stroke-width:2"><path d="M5 13l4 4L19 7"/></svg></div>
+      <h3>신청이 접수되었습니다</h3>
+      <p id="success-msg"></p>
+      <button class="submit" id="done" type="button">확인</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+/* ---------- constants ---------- */
+const IMG = (id, w = 900) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=75&w=${w}`;
+const ARROW = '<svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const EASE = { expo: "cubic-bezier(0.16,1,0.3,1)", quart: "cubic-bezier(0.25,1,0.5,1)", ioCubic: "cubic-bezier(0.65,0,0.35,1)" };
+const MIN_VISIBLE_MS = 1400, MAX_VISIBLE_MS = 2600, EXIT_MS = 850;
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isMobile = () => innerWidth <= 768;
+const html = document.documentElement;
+
+const COLLECTIONS = [
+  { img: "1763775468707-573c7cd6b0da", brand: "무료 대여", title: "볼·조끼·풋살화", cta: "구장 보기", href: "#facilities", alt: "풋살공 위에 발을 올린 선수" },
+  { img: "1760174083916-ea7d00664d58", brand: "소셜 매치", title: "플랩풋볼", cta: "매치 보기", href: "#programs", alt: "태클 속에서 공을 지키는 풋살 선수" },
+  { img: "1676444920926-c8a084ec4003", brand: "유소년 레슨", title: "방과후·방문", cta: "레슨 보기", href: "#programs", alt: "풋살 수업 중인 아이들" },
+];
+const COACHES = [
+  { name: "황헌주", role: "축구 전문 강사 · 유소년 선수 육성", headline: ["축구", "전문", "황헌주", "코치"], career: [
+    "제주국제대학교 학사", "안산그리너스축구단 (K2)", "포천시민축구단 (K3)", "Villarreal CF (스페인) 연수", "C.D. Roda CF (스페인) 연수",
+    "EM풋볼아카데미 감독", "유소년축구지도자 1급", "방과후스포츠지도자 1급", "유소년축구심판 3급", "기업 축구 동호회 강사", "방과후축구교실 강사",
+  ] },
+  { name: "최강희", role: "축구 전문 강사 · 유소년 선수 육성", headline: ["축구", "전문", "최강희", "코치"], career: [
+    "성균관대학교 학사", "포항 스틸러스 U-18", "전주시민축구단", "U-18 K리그 챔피언십 수비상 수상", "U리그 득점왕 수상",
+    "덴소컵 대표 선발", "AFC C급 라이선스 보유", "유소년축구지도자 1급", "방과후스포츠지도자 1급",
+  ] },
+];
+const PROGRAMS = [
+  ["01", "성인 아카데미", "남녀 모두 수강할 수 있고, 한 달에 네 번 수업합니다.", "#pricing"],
+  ["02", "유소년 축구레슨", "방과후 수업과 방문 레슨도 합니다.", "#pricing"],
+  ["03", "프리미엄 축구레슨", "처음이면 체험레슨(30,000원)부터 받아보세요.", "#pricing"],
+  ["04", "그룹 레슨", "친구나 동료와 같이 신청하는 소규모 레슨입니다.", "#contact"],
+  ["05", "엘리트 레슨", "실력을 더 올리고 싶은 분을 위한 집중 레슨입니다.", "#contact"],
+  ["06", "소셜 매치", "플랩풋볼로 신청하면 혼자 와도 경기를 뛸 수 있어요.", "#testimonials"],
+];
+const PRICES = [
+  { group: "구장 대여", items: [
+    ["실내풋살장 (5vs5)", "1시간", "65,000"],
+    ["구장 전체 대관", "행사 문의", null],
+    ["족구장 대여", "", "40,000"],
+  ] },
+  { group: "레슨", items: [
+    ["성인 아카데미", "남/여 · 월 4회", "100,000"],
+    ["유소년 · 방과후 · 방문 축구레슨", "", "100,000"],
+    ["프리미엄 축구레슨", "체험레슨", "30,000"],
+  ] },
+];
+const INFO = [
+  ["예약·대관", "스페이스클라우드에서 ‘KK실내풋살파크’를 검색하거나 소셜 매치 플랫폼으로 예약하세요. 전체 대관은 전화로 문의해 주세요.", "요금", "실내 5vs5 1시간 65,000원"],
+  ["오시는 길", "경기도 의정부시 둔야로 12, 3층 (의정부보건소 옆).<br>경전철 의정부역 1번 출구에서 약 380m.", "주차", "무료"],
+  ["문의", "레슨 상담, 대관, 행사 문의는 전화로 받습니다.", "전화", "0507-1344-0708 · 010-2922-0708"],
+];
+
+/* ---------- adaptive rem (scale up above 1920) ---------- */
+function setRem() {
+  const FONT_BASE = 16, BASE_W = 1920, COEF = 0.6666;
+  const reduction = ((BASE_W - innerWidth) / BASE_W) * 100 * COEF;
+  const size = FONT_BASE - (FONT_BASE * reduction) / 100;
+  if (size > FONT_BASE) html.style.fontSize = size + "px"; else html.style.removeProperty("font-size");
+}
+setRem();
+addEventListener("resize", setRem);
+
+/* ---------- spring helper ---------- */
+const active = new Set();
+function spring(initial, { tension = 170, friction = 26 } = {}, onUpdate) {
+  const s = { cur: { ...initial }, vel: {}, target: { ...initial }, tension, friction, onUpdate, timer: 0, onRest: null };
+  for (const k in initial) s.vel[k] = 0;
+  s.to = (t, delay = 0, onRest) => {
+    clearTimeout(s.timer);
+    const go = () => { Object.assign(s.target, t); s.onRest = onRest || null; active.add(s); };
+    delay > 0 ? (s.timer = setTimeout(go, delay)) : go();
+  };
+  s.set = (v) => {
+    clearTimeout(s.timer); active.delete(s);
+    Object.assign(s.cur, v); Object.assign(s.target, v);
+    for (const k in v) s.vel[k] = 0;
+    onUpdate(s.cur);
+  };
+  onUpdate(s.cur);
+  return s;
+}
+function stepSprings(dt) {
+  const n = Math.ceil(dt / 0.002), h = dt / n;
+  for (const s of active) {
+    let rest = true;
+    for (const k in s.target) {
+      let x = s.cur[k] ?? s.target[k], v = s.vel[k] || 0; const t = s.target[k];
+      for (let i = 0; i < n; i++) { v += (-s.tension * (x - t) - s.friction * v) * h; x += v * h; }
+      if (Math.abs(x - t) < 0.002 && Math.abs(v) < 0.02) { x = t; v = 0; } else rest = false;
+      s.cur[k] = x; s.vel[k] = v;
+    }
+    s.onUpdate(s.cur);
+    if (rest) { active.delete(s); const cb = s.onRest; s.onRest = null; cb && cb(); }
+  }
+}
+// apply {opacity,x,y,scale,rotate} to an element; `extra` appended to transform
+const tf = (el, extra = "") => (v) => {
+  if ("opacity" in v) el.style.opacity = v.opacity;
+  el.style.transform = `translate3d(${v.x || 0}px,${v.y || 0}px,0) scale(${v.scale ?? 1}) rotate(${v.rotate || 0}deg) ${extra}`;
+};
+
+/* ---------- ready gate ---------- */
+let resolveReady; const whenReady = new Promise((r) => (resolveReady = r));
+
+/* ---------- in-view helpers ---------- */
+function onceInView(el, cb, threshold = 0.15) {
+  const io = new IntersectionObserver((es) => {
+    if (es.some((e) => e.isIntersecting)) { io.disconnect(); cb(); }
+  }, { threshold, rootMargin: "0px 0px -5% 0px" });
+  io.observe(el);
+}
+function inview(el, from, to, cfg, delay = 0, gated = false, extra = "") {
+  const sp = spring(from, cfg, tf(el, extra));
+  const arm = () => onceInView(el, () => sp.to(to, delay), 0.1);
+  gated ? whenReady.then(arm) : arm();
+  return sp;
+}
+function hover(trigger, target, from, to, cfg, extra = "") {
+  const sp = spring(from, cfg, tf(target, extra));
+  trigger.addEventListener("pointerenter", () => { if (!isMobile()) sp.to(to); });
+  trigger.addEventListener("pointerleave", () => sp.to(from));
+  return sp;
+}
+
+/* ---------- text reveal primitives ---------- */
+function prep(spans, out) {
+  spans.forEach((s) => { s.style.transition = "none"; s.style.transform = out; s.style.opacity = 0; });
+}
+function play(spans, { delay = 0, stagger = 120, dur = 950, ease = EASE.expo }) {
+  if (spans[0]) spans[0].offsetWidth; // flush
+  spans.forEach((s, i) => {
+    const d = delay + i * stagger;
+    s.style.transition = `transform ${dur}ms ${ease} ${d}ms, opacity ${dur}ms ${ease} ${d}ms`;
+    s.style.transform = "translateY(0)"; s.style.opacity = 1;
+  });
+}
+function buildLines(el) {
+  const lines = el.dataset.lines.split("|");
+  el.setAttribute("aria-label", lines.join(" "));
+  el.innerHTML = lines.map((l) => `<span class="mask-line" aria-hidden="true"><span class="mask-inner">${l}</span></span>`).join("");
+  return [...el.querySelectorAll(".mask-inner")];
+}
+function buildWords(el, cls = "mask") {
+  const words = el.textContent.trim().split(/\s+/);
+  el.setAttribute("aria-label", words.join(" "));
+  el.innerHTML = words.map((w) => cls === "mask"
+    ? `<span class="mask-word" aria-hidden="true"><span class="mask-inner">${w}</span></span>`
+    : `<span class="fade-word" aria-hidden="true">${w}</span>`).join(" ");
+  return [...el.querySelectorAll(cls === "mask" ? ".mask-inner" : ".fade-word")];
+}
+
+/* ---------- parallax ---------- */
+const parallax = [];
+function addParallax(el, section, from, to, axis, unit = "%") { parallax.push({ el, section, from, to, axis, unit }); }
+function updateParallax() {
+  const vh = innerHeight;
+  for (const p of parallax) {
+    const r = p.section.getBoundingClientRect();
+    const prog = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+    const v = p.from + (p.to - p.from) * prog;
+    p.el.style.transform = p.axis === "y" ? `translate3d(0,${v}${p.unit},0)` : `translate3d(${v}${p.unit},0,0)`;
+  }
+}
+
+/* ---------- Lenis + scroll lock ---------- */
+let lenis = null;
+try {
+  const { default: Lenis } = await import("lenis");
+  lenis = new Lenis({ smoothWheel: true });
+} catch (e) { console.warn("Lenis failed to load; using native scroll", e); }
+window.scrollTo(0, 0);
+
+const locks = new Set();
+function applyLock() {
+  if (locks.size) {
+    lenis?.stop();
+    Object.assign(html.style, { position: "relative", overflow: "hidden", height: "100%" });
+  } else {
+    html.style.removeProperty("position"); html.style.removeProperty("overflow"); html.style.removeProperty("height");
+    lenis?.start();
+  }
+}
+const lock = (k) => { locks.add(k); applyLock(); };
+const unlock = (k) => { locks.delete(k); applyLock(); };
+function scrollToHash(hash) {
+  const t = hash.length > 1 && document.querySelector(hash);
+  if (!t) return false;
+  lenis ? lenis.scrollTo(t) : t.scrollIntoView({ behavior: "smooth" });
+  return true;
+}
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || a.closest("#menu")) return;
+  e.preventDefault();
+  scrollToHash(a.getAttribute("href"));
+});
+
+let last = performance.now();
+function raf(t) {
+  lenis?.raf(t);
+  const dt = Math.min(0.064, Math.max(0, (t - last) / 1000)); last = t;
+  if (active.size) stepSprings(dt);
+  updateParallax();
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+/* ---------- shared components ---------- */
+function dots(container, n, onPick) {
+  container.innerHTML = "";
+  const btns = Array.from({ length: n }, (_, i) => {
+    const b = document.createElement("button");
+    b.className = "dot-btn"; b.setAttribute("aria-label", `${i + 1}번째 슬라이드`);
+    b.innerHTML = '<span class="dot"></span>';
+    b.addEventListener("click", () => onPick(i));
+    container.appendChild(b); return b;
+  });
+  return (idx) => btns.forEach((b, i) => {
+    b.classList.toggle("is-active", i === idx);
+    i === idx ? b.setAttribute("aria-current", "true") : b.removeAttribute("aria-current");
+  });
+}
+document.querySelectorAll(".pill").forEach((p) => hover(p, p.querySelector(".pill-arrow"), { x: 0 }, { x: 5 }, { tension: 320, friction: 20 }));
+document.querySelectorAll(".close-btn").forEach((b) => hover(b, b.querySelector(".x-ico"), { rotate: 0 }, { rotate: 90 }, { tension: 300, friction: 18 }));
+
+/* ---------- HERO ---------- */
+addParallax(document.getElementById("hero-plate"), document.getElementById("hero"), 0, 12, "y");
+const heroTitle = document.getElementById("hero-title");
+const titleSpans = buildWords(heroTitle);
+// stretch the headline to the exact gutter-to-gutter width so it lines up with the header and cards
+function fitTitle() {
+  heroTitle.style.fontSize = "";
+  const wrap = heroTitle.parentElement, cs = getComputedStyle(wrap);
+  const avail = wrap.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const r = document.createRange(); r.selectNodeContents(heroTitle);
+  const tw = r.getBoundingClientRect().width;
+  if (tw) heroTitle.style.fontSize = (parseFloat(getComputedStyle(heroTitle).fontSize) * avail) / tw + "px";
+}
+fitTitle();
+document.fonts?.load('400 1em "Anton"').then(fitTitle);
+document.fonts?.ready.then(fitTitle);
+// width changes include the scrollbar appearing after the loader unlocks scroll, which fires no resize event
+let fitW = 0;
+new ResizeObserver(([e]) => {
+  const w = e.contentRect.width;
+  if (w !== fitW) { fitW = w; fitTitle(); }
+}).observe(heroTitle.parentElement);
+prep(titleSpans, "translateY(115%)");
+const subSpans = buildLines(document.getElementById("hero-sub"));
+prep(subSpans, "translateY(115%)");
+whenReady.then(() => {
+  play(subSpans, { delay: 450, dur: 900, ease: EASE.expo });
+  play(titleSpans, { stagger: 140, dur: 1100, ease: EASE.expo });
+});
+
+// collection slider
+const csStack = document.getElementById("cs-stack");
+const CS_OUT = { opacity: 0, y: 16, scale: 0.96 }, CS_IN = { opacity: 1, y: 0, scale: 1 };
+let csIdx = 0, csCard = null, csTimer = 0;
+function csMake(c) {
+  const el = document.createElement("div");
+  el.className = "cs-card";
+  el.innerHTML = `<img class="cs-img" src="${IMG(c.img, 300)}" alt="${c.alt}" loading="lazy"><div class="cs-meta"><p class="cs-brand">${c.brand}</p><p class="cs-title">${c.title}</p><a class="cs-cta" href="${c.href}">${c.cta} →</a></div>`;
+  return el;
+}
+const csDots = dots(document.getElementById("cs-dots"), COLLECTIONS.length, (i) => { csGo(i); csAuto(); });
+function csGo(i, animate = true) {
+  csIdx = (i + COLLECTIONS.length) % COLLECTIONS.length;
+  const el = csMake(COLLECTIONS[csIdx]);
+  csStack.appendChild(el);
+  if (csCard) {
+    const old = csCard, osp = old._sp;
+    osp.to(CS_OUT, 0, () => old.remove());
+    old.setAttribute("aria-hidden", "true");
+  }
+  el._sp = spring(animate ? CS_OUT : CS_IN, { tension: 210, friction: 24 }, tf(el));
+  if (animate) el._sp.to(CS_IN);
+  csCard = el; csDots(csIdx);
+}
+function csAuto() { clearInterval(csTimer); csTimer = setInterval(() => csGo(csIdx + 1), 3800); }
+csGo(0, false);
+inview(document.getElementById("cs"), { opacity: 0, y: 28 }, { opacity: 1, y: 0 }, { tension: 200, friction: 26 }, 650, true);
+inview(document.getElementById("member"), { opacity: 0, y: 28 }, { opacity: 1, y: 0 }, { tension: 200, friction: 26 }, 780, true);
+whenReady.then(csAuto);
+
+/* ---------- burger / menu ---------- */
+const menu = document.getElementById("menu");
+const menuBg = spring({ opacity: 0 }, { tension: 260, friction: 30 }, tf(document.getElementById("menu-bg")));
+const MENU_OUT = { opacity: 0, y: -24 }, MENU_IN = { opacity: 1, y: 0 };
+const menuPanel = spring(MENU_OUT, { tension: 220, friction: 28 }, tf(document.getElementById("menu-panel")));
+const menuLinks = [...document.querySelectorAll("#menu-nav a")].map((a) => spring({ opacity: 0, y: 28 }, { tension: 200, friction: 26 }, tf(a)));
+let menuOpen = false;
+function setMenu(open) {
+  if (open === menuOpen) return;
+  menuOpen = open;
+  menu.classList.toggle("open", open);
+  open ? menu.removeAttribute("inert") : menu.setAttribute("inert", "");
+  menu.setAttribute("aria-hidden", String(!open));
+  document.getElementById("burger").setAttribute("aria-expanded", String(open));
+  menuBg.to({ opacity: open ? 1 : 0 });
+  menuPanel.to(open ? MENU_IN : MENU_OUT);
+  menuLinks.forEach((sp, i) => (open ? sp.to({ opacity: 1, y: 0 }, 120 + i * 70) : sp.to({ opacity: 0, y: 28 })));
+  open ? lock("menu") : unlock("menu");
+  if (open) setTimeout(() => document.getElementById("menu-close").focus(), 50);
+}
+document.getElementById("burger").addEventListener("click", () => setMenu(true));
+document.getElementById("menu-close").addEventListener("click", () => setMenu(false));
+document.getElementById("menu-bg").addEventListener("click", () => setMenu(false));
+document.querySelectorAll("#menu a[href^='#']").forEach((a) => a.addEventListener("click", (e) => {
+  e.preventDefault(); setMenu(false);
+  requestAnimationFrame(() => scrollToHash(a.getAttribute("href")));
+}));
+document.getElementById("menu-book").addEventListener("click", () => { setMenu(false); setModal(true); });
+
+/* ---------- TRUST ---------- */
+const trust = document.getElementById("trust");
+const gws = [...trust.querySelectorAll(".gw")];
+gws.forEach((g) => {
+  const [f, t] = g.dataset.px.split(",").map(Number);
+  addParallax(g, trust, f, t, "x");
+  g.innerHTML = '<span class="mask-word"><span class="mask-inner"></span></span>';
+});
+const gwInner = gws.map((g) => g.querySelector(".mask-inner"));
+const coachStack = document.getElementById("coach-stack");
+const coachProfs = COACHES.map((c, i) => {
+  const el = document.createElement("div");
+  el.className = "coach-prof";
+  el.innerHTML = `<p class="coach-kicker">코치 0${i + 1}</p><h3 class="coach-name">${c.name}</h3><p class="coach-role">${c.role}</p><ul class="coach-list">${c.career.map((x) => `<li>${x}</li>`).join("")}</ul>`;
+  coachStack.appendChild(el);
+  el._sp = spring({ opacity: i === 0 ? 1 : 0 }, { tension: 260, friction: 26 }, (v) => (el.style.opacity = v.opacity));
+  return el;
+});
+let tIdx = 0, tSeen = false;
+function trustRender() {
+  const c = COACHES[tIdx];
+  document.getElementById("trust-title").setAttribute("aria-label", c.headline.join(" "));
+  gwInner.forEach((s, i) => (s.textContent = c.headline[i]));
+  prep(gwInner, "translateY(115%)");
+  if (tSeen) play(gwInner, { stagger: 0, dur: 700, ease: EASE.expo });
+  coachProfs.forEach((el, i) => {
+    el._sp.to({ opacity: i === tIdx ? 1 : 0 });
+    el.setAttribute("aria-hidden", String(i !== tIdx));
+  });
+  tDots(tIdx);
+}
+const tDots = dots(document.getElementById("trust-dots"), COACHES.length, (i) => { tIdx = i; trustRender(true); });
+document.getElementById("trust-prev").addEventListener("click", () => { tIdx = (tIdx - 1 + COACHES.length) % COACHES.length; trustRender(true); });
+document.getElementById("trust-next").addEventListener("click", () => { tIdx = (tIdx + 1) % COACHES.length; trustRender(true); });
+trustRender(false);
+onceInView(document.getElementById("trust-title"), () => { tSeen = true; play(gwInner, { stagger: 0, dur: 700, ease: EASE.expo }); });
+inview(document.getElementById("coach"), { opacity: 0, y: 60, scale: 0.92, rotate: 3 }, { opacity: 1, y: 0, scale: 1, rotate: 3 }, { tension: 170, friction: 26 });
+const prevBtn = document.getElementById("trust-prev"), nextBtn = document.getElementById("trust-next");
+hover(prevBtn, prevBtn.querySelector("svg"), { scale: 1 }, { scale: 1.15 }, { tension: 320, friction: 18 }, "scaleX(-1)");
+hover(nextBtn, nextBtn.querySelector("svg"), { scale: 1 }, { scale: 1.15 }, { tension: 320, friction: 18 });
+
+/* ---------- PROGRAMS ---------- */
+const progList = document.getElementById("prog-list");
+PROGRAMS.forEach(([idx, name, desc, href], i) => {
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="${href}"><div class="prog-row"><span class="prog-idx">${idx}</span><div class="prog-body"><h3 class="prog-name">${name}</h3><p class="prog-desc">${desc}</p></div><span class="prog-arrow" aria-hidden="true">${ARROW}</span></div></a>`;
+  progList.appendChild(li);
+  inview(li.querySelector(".prog-row"), { opacity: 0, y: 26 }, { opacity: 1, y: 0 }, { tension: 190, friction: 26 }, i * 90);
+  hover(li.querySelector("a"), li.querySelector(".prog-arrow svg"), { x: 0, opacity: 0.55 }, { x: 8, opacity: 1 }, { tension: 300, friction: 20 });
+});
+
+/* ---------- FACILITIES ---------- */
+const facWords = buildWords(document.getElementById("fac-body"), "fade");
+prep(facWords, "translateY(18px)");
+onceInView(document.getElementById("fac-body"), () => play(facWords, { delay: 250, stagger: 28, dur: 700, ease: EASE.quart }));
+document.querySelectorAll(".tile").forEach((t) => hover(t, t.querySelector("img"), { scale: 1 }, { scale: 1.03 }, { tension: 300, friction: 22 }));
+
+/* ---------- STATS ---------- */
+const priceGroups = document.getElementById("price-groups");
+PRICES.forEach(({ group, items }) => {
+  const g = document.createElement("div");
+  g.className = "price-group";
+  g.innerHTML = `<h3>${group}</h3><ul class="price-list"></ul>`;
+  items.forEach(([name, sub, price], i) => {
+    const li = document.createElement("li");
+    const val = price ? `${price}<small>원</small>` : "전화 문의";
+    li.innerHTML = `<div class="price-row"><div class="price-label"><span class="price-name">${name}</span>${sub ? `<span class="price-sub">${sub}</span>` : ""}</div><span class="price-val${price ? "" : " muted"}">${val}</span></div>`;
+    g.querySelector("ul").appendChild(li);
+    inview(li.firstChild, { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, { tension: 180, friction: 24 }, i * 110);
+  });
+  priceGroups.appendChild(g);
+});
+
+/* ---------- TESTIMONIALS ---------- */
+const tg = document.getElementById("testi-grid");
+INFO.forEach(([title, body, key, val], i) => {
+  const li = document.createElement("li");
+  li.innerHTML = `<article class="testi"><div><span class="q-glyph" aria-hidden="true">0${i + 1}</span><h3 class="info-title">${title}</h3><p class="info-body">${body}</p></div><figcaption><b>${key}</b><span>${val}</span></figcaption></article>`;
+  tg.appendChild(li);
+  inview(li, { opacity: 0, y: 40 }, { opacity: 1, y: 0 }, { tension: 180, friction: 26 }, i * 120);
+  const card = li.querySelector(".testi");
+  hover(card, card, { y: 0 }, { y: -8 }, { tension: 300, friction: 22 });
+});
+
+/* ---------- generic data-inview + stacked lines ---------- */
+document.querySelectorAll("[data-inview]").forEach((el) => {
+  const o = JSON.parse(el.dataset.inview);
+  inview(el, o.from, o.to, { tension: o.t, friction: o.f }, o.d || 0);
+});
+const stackOpts = { "facilities-title": { stagger: 120 } };
+document.querySelectorAll("[data-lines]:not([data-manual])").forEach((el) => {
+  const spans = buildLines(el);
+  prep(spans, "translateY(115%)");
+  onceInView(el, () => play(spans, { stagger: 120, dur: 950, ease: EASE.expo, ...(stackOpts[el.id] || {}) }));
+});
+
+/* ---------- CONTACT MODAL ---------- */
+const modal = document.getElementById("modal");
+const modalTitleSpans = buildLines(document.getElementById("modal-title"));
+prep(modalTitleSpans, "translateY(115%)");
+const modalBg = spring({ opacity: 0 }, { tension: 240, friction: 30 }, tf(document.getElementById("modal-bg")));
+const M_OUT = { opacity: 0, y: 28, scale: 0.96 }, M_IN = { opacity: 1, y: 0, scale: 1 };
+const modalPanel = spring(M_OUT, { tension: 240, friction: 26 }, tf(document.getElementById("modal-panel")));
+const form = document.getElementById("form"), submit = document.getElementById("submit"), success = document.getElementById("success");
+let modalOpen = false, resetTimer = 0, sendTimer = 0;
+function setModal(open) {
+  if (open === modalOpen) return;
+  modalOpen = open;
+  modal.classList.toggle("open", open);
+  open ? modal.removeAttribute("inert") : modal.setAttribute("inert", "");
+  modal.setAttribute("aria-hidden", String(!open));
+  modalBg.to({ opacity: open ? 1 : 0 });
+  modalPanel.to(open ? M_IN : M_OUT);
+  if (open) {
+    clearTimeout(resetTimer);
+    lock("modal");
+    prep(modalTitleSpans, "translateY(115%)");
+    play(modalTitleSpans, { delay: 80, stagger: 90, dur: 800, ease: EASE.expo });
+    setTimeout(() => document.getElementById("f-name").focus(), 120);
+  } else {
+    unlock("modal");
+    resetTimer = setTimeout(() => {
+      clearTimeout(sendTimer);
+      form.reset(); form.hidden = false; success.hidden = true;
+      submit.disabled = false; submit.textContent = "신청하기";
+    }, 350);
+  }
+}
+document.querySelectorAll("[data-open-contact]").forEach((b) => b.addEventListener("click", () => setModal(true)));
+document.getElementById("modal-close").addEventListener("click", () => setModal(false));
+document.getElementById("modal-bg").addEventListener("click", () => setModal(false));
+document.getElementById("done").addEventListener("click", () => setModal(false));
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // stub — no network
+  submit.disabled = true; submit.textContent = "전송 중…";
+  const name = document.getElementById("f-name").value.trim();
+  sendTimer = setTimeout(() => {
+    document.getElementById("success-msg").textContent = `${name ? name + "님, " : ""}신청 감사합니다. 확인 후 연락드릴게요. 급한 문의는 0507-1344-0708로 전화 주세요.`;
+    form.hidden = true; success.hidden = false;
+    document.getElementById("done").focus();
+  }, 700);
+});
+addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  if (modalOpen) setModal(false); else if (menuOpen) setMenu(false);
+});
+
+/* ---------- LOADER ---------- */
+(function loader() {
+  const el = document.getElementById("loader");
+  const minMs = reduced ? 200 : MIN_VISIBLE_MS;
+  lock("loader");
+  const mark = spring({ opacity: 0, y: 16 }, { tension: 200, friction: 22 }, tf(document.getElementById("loader-mark")));
+  mark.to({ opacity: 1, y: 0 });
+  const fill = document.getElementById("loader-fill");
+  fill.offsetWidth;
+  fill.style.transition = `transform ${minMs - 120 > 0 ? minMs - 120 : 80}ms ${EASE.ioCubic} 120ms`;
+  fill.style.transform = "scaleX(1)";
+
+  let started = false, done = false;
+  const start = () => { if (started) return; started = true; setTimeout(finish, minMs); };
+  function finish() {
+    if (done) return; done = true;
+    resolveReady();
+    unlock("loader");
+    if (reduced) { el.remove(); return; }
+    el.style.transition = `transform ${EXIT_MS}ms ${EASE.ioCubic}`;
+    el.style.transform = "translateY(-105%)";
+    setTimeout(() => el.remove(), EXIT_MS);
+  }
+  document.readyState === "complete" ? start() : addEventListener("load", start, { once: true });
+  setTimeout(start, MAX_VISIBLE_MS);
+})();
+</script>
+</body>
+</html>
